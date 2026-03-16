@@ -10,6 +10,7 @@ interface Props {
 
 const { title, description, pageStyles = '' } = Astro.props;
 const isDev = import.meta.env.DEV;
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <!DOCTYPE html>
@@ -27,9 +28,9 @@ const isDev = import.meta.env.DEV;
 <body>
   <header class="nav-header" id="nav-header">
     <div class="container nav-inner">
-      <a href="/" class="nav-logo">
-        <img src="/logo-lime.png" alt="Levelled Media" class="nav-logo-icon nav-logo-icon--lime">
-        <img src="/logo-dark.png" alt="Levelled Media" class="nav-logo-icon nav-logo-icon--dark">
+      <a href={baseUrl + "/"} class="nav-logo">
+        <img src={baseUrl + "/logo-lime.png"} alt="Levelled Media" class="nav-logo-icon nav-logo-icon--lime">
+        <img src={baseUrl + "/logo-dark.png"} alt="Levelled Media" class="nav-logo-icon nav-logo-icon--dark">
       </a>
 
       <nav class="nav-links" id="nav-links">
@@ -55,8 +56,8 @@ const isDev = import.meta.env.DEV;
   <footer class="footer" id="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <a href="/" class="nav-logo footer-logo">
-          <img src="/logo-dark.png" alt="Levelled Media" class="nav-logo-icon">
+        <a href={baseUrl + "/"} class="nav-logo footer-logo">
+          <img src={baseUrl + "/logo-dark.png"} alt="Levelled Media" class="nav-logo-icon">
         </a>
         <p class="footer-tagline">Websites and local SEO for home service businesses that want more booked jobs.</p>
       </div>

@@ -3,6 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import TestimonialsSection from '../components/TestimonialsSection.astro';
 import TestimonialsSectionVideo from '../components/TestimonialsSectionVideo.astro';
 
+const baseUrl = import.meta.env.BASE_URL;
+
 const pageStyles = `
     /* Programmatic UI Graphics & Animations */
     .ui-graphic {
@@ -1015,7 +1017,7 @@ const pageStyles = `
           </div>
           <div class="split-card-visual">
             <div class="split-card-phone">
-              <img src="/phone-mockup.png" alt="Contractor website on mobile" class="split-card-phone-img">
+              <img src={baseUrl + "/phone-mockup.png"} alt="Contractor website on mobile" class="split-card-phone-img">
             </div>
           </div>
         </div>
@@ -1026,7 +1028,7 @@ const pageStyles = `
             <a href="#" class="btn btn-primary">Learn more</a>
           </div>
           <div class="split-card-browser">
-            <img src="/browser-mockup.png" alt="Local search optimisation browser mockup" class="split-card-browser-img split-card-browser-img--animated">
+            <img src={baseUrl + "/browser-mockup.png"} alt="Local search optimisation browser mockup" class="split-card-browser-img split-card-browser-img--animated">
           </div>
         </div>
       </div>
@@ -1044,7 +1046,7 @@ const pageStyles = `
           </div>
           <div class="split-card-visual">
             <div class="split-card-phone split-card-phone--static">
-              <img src="/phone-mockup2.png" alt="Contractor website on mobile"
+              <img src={baseUrl + "/phone-mockup2.png"} alt="Contractor website on mobile"
                 class="split-card-phone-img split-card-phone-img--static">
             </div>
           </div>
@@ -1060,7 +1062,7 @@ const pageStyles = `
           </div>
           <div class="split-card-visual">
             <div class="split-card-browser-frame">
-              <img src="/browser-mockup5.png" alt="Local search optimisation browser mockup"
+              <img src={baseUrl + "/browser-mockup5.png"} alt="Local search optimisation browser mockup"
                 class="split-card-browser-img">
             </div>
           </div>
@@ -1597,7 +1599,7 @@ const pageStyles = `
           <button class="btn btn-primary btn-lg" id="promo-modal-open">Request My Free Website</button>
         </div>
         <div class="promo-graphic">
-          <img src="/free-website.png" alt="Free website design for home service businesses" class="promo-graphic-img">
+          <img src={baseUrl + "/free-website.png"} alt="Free website design for home service businesses" class="promo-graphic-img">
         </div>
       </div>
     </div>
@@ -1623,7 +1625,7 @@ const pageStyles = `
           </ul>
         </div>
         <div class="coverage-map">
-          <img src="/trades.jpg" alt="Home service industries" style="width: 100%; height: auto; border-radius: 16px;" />
+          <img src={baseUrl + "/trades.jpg"} alt="Home service industries" style="width: 100%; height: auto; border-radius: 16px;" />
         </div>
       </div>
     </div>
