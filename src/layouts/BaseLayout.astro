@@ -68,14 +68,14 @@ const baseUrl = import.meta.env.BASE_URL;
           <li><a href="/contact">Website Design</a></li>
           <li><a href="/contact">Local SEO</a></li>
           <li><a href="#">Google Business Profile</a></li>
-          <li><a href="/pricing">Pricing</a></li>
+          {isDev && <li><a href="/pricing">Pricing</a></li>}
         </ul>
       </div>
 
       <div class="footer-col">
         <h5 class="footer-col-title">Company</h5>
         <ul>
-          <li><a href="/about">About us</a></li>
+          {isDev && <li><a href="/about">About us</a></li>}
           <li><a href="#">Careers</a></li>
           <li><a href="#">Blog</a></li>
           <li><a href="#">Press</a></li>
@@ -88,12 +88,10 @@ const baseUrl = import.meta.env.BASE_URL;
         <ul>
           <li><a href="#">Privacy Policy</a></li>
           <li><a href="#">Terms of Service</a></li>
-          <li><a href="#">Cookie Policy</a></li>
-          <li><a href="#">Licences</a></li>
         </ul>
       </div>
 
-      <div class="footer-socials">
+      {isDev && <div class="footer-socials">
         <h5 class="footer-col-title">Follow Us</h5>
 
         <div class="footer-social-group">
@@ -121,7 +119,7 @@ const baseUrl = import.meta.env.BASE_URL;
             </svg>
           </a>
         </div>
-      </div>
+      </div>}
     </div>
 
     <div class="subfooter">
