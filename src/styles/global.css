@@ -1864,7 +1864,7 @@ a { text-decoration: none; color: inherit; }
 .promo-card {
   background: var(--dark);
   border-radius: var(--radius-card);
-  padding: 72px 80px;
+  padding: 90px;
   display: flex;
   align-items: stretch;
   justify-content: space-between;
