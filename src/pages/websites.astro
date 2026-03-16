@@ -1,0 +1,187 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TestimonialsSection from '../components/TestimonialsSection.astro';
+---
+
+<BaseLayout
+  title="Website Design for Home Service Businesses — Levelled Media"
+  description="We design high-converting, mobile-first websites for home service businesses — built to generate calls and form submissions from day one."
+>
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section class="hero-section hero-section--compact" id="hero">
+    <div class="container">
+      <div class="hero-inner" style="align-items: center; text-align: center;">
+
+        <div class="hero-badge fade-up">
+          <span class="badge-dot"></span>
+          Website Design
+        </div>
+
+        <h1 class="hero-title fade-up">A website that works as hard<br>as you do</h1>
+
+        <p class="hero-subtitle fade-up" style="max-width: 640px; margin-left: auto; margin-right: auto;">
+          We design fast, mobile-first websites for home service businesses built to turn visitors into calls, form submissions, and booked jobs from day one.
+        </p>
+
+        <div class="hero-ctas fade-up">
+          <button class="btn btn-primary btn-lg" id="promo-modal-open">Get my free website</button>
+          <a href="/pricing" class="btn btn-secondary btn-lg">See pricing</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TRUSTED BY — 3 testimonial cards
+  ============================================================ -->
+  <TestimonialsSection />
+
+  <!-- ============================================================
+       FAQ — WEBSITES
+  ============================================================ -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="faq-inner fade-up">
+        <div class="faq-content">
+          <p class="eyebrow">Website questions</p>
+          <h2 class="section-title">Questions &amp;<br>Answers</h2>
+          <p class="faq-sub">Everything you need to know about our website service. Can't find what you're looking for? Just reach out.</p>
+          <a href="#" class="btn btn-secondary">Contact Us</a>
+        </div>
+
+        <div class="faq-list">
+          <div class="accordion-item" data-accordion>
+            <button class="accordion-trigger">
+              Is the website really free?
+              <span class="accordion-icon"></span>
+            </button>
+            <div class="accordion-body">
+              Yes. We design and build your website at no upfront cost. The only requirement is an active monthly retainer, which covers hosting, SEO, and ongoing optimisation.
+            </div>
+          </div>
+          <div class="accordion-item" data-accordion>
+            <button class="accordion-trigger">
+              How long does it take to build?
+              <span class="accordion-icon"></span>
+            </button>
+            <div class="accordion-body">
+              Most websites are completed within 2–3 weeks from our initial call. We handle everything and just need a little input from you at key stages.
+            </div>
+          </div>
+          <div class="accordion-item" data-accordion>
+            <button class="accordion-trigger">
+              Will my website work on mobile?
+              <span class="accordion-icon"></span>
+            </button>
+            <div class="accordion-body">
+              Absolutely. Every website we build is mobile-first, designed and optimised for phones before anything else, since that's where the majority of local searches happen.
+            </div>
+          </div>
+          <div class="accordion-item" data-accordion>
+            <button class="accordion-trigger">
+              Do I own my website?
+              <span class="accordion-icon"></span>
+            </button>
+            <div class="accordion-body">
+              Yes. Once your website is live, you own it outright. We don't lock you into proprietary platforms. Your site is yours to keep, even if you ever cancel.
+            </div>
+          </div>
+          <div class="accordion-item" data-accordion>
+            <button class="accordion-trigger">
+              What does a free website include?
+              <span class="accordion-icon"></span>
+            </button>
+            <div class="accordion-body">
+              Your free website includes a professionally designed, mobile-first site built around your services and location. It comes with clear calls to action, a contact form, and service pages tailored to your business.
+            </div>
+          </div>
+          <div class="accordion-item" data-accordion>
+            <button class="accordion-trigger">
+              Can you work with my existing website?
+              <span class="accordion-icon"></span>
+            </button>
+            <div class="accordion-body">
+              Yes. If your current site is performing reasonably well, we can improve and optimise it rather than starting from scratch. We'll review it first and give you an honest recommendation.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PRE-FOOTER CTA
+  ============================================================ -->
+  <section class="final-cta-section">
+    <div class="container text-center fade-up">
+      <h2 class="section-title">Ready to get a website<br>that actually converts?</h2>
+      <p class="final-cta-sub">Get your free website and start generating more local inquiries today.</p>
+      <button class="btn btn-primary btn-xl" id="promo-modal-open-footer">Get my free website</button>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FREE WEBSITE MODAL
+  ============================================================ -->
+  <div class="modal-overlay" id="promo-modal" aria-modal="true" role="dialog" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <button class="modal-close" id="promo-modal-close" aria-label="Close">&#x2715;</button>
+      <form class="modal-form" action="#" method="post">
+        <div class="modal-form-row">
+          <div class="modal-form-group">
+            <label class="modal-form-label" for="modal-name">Your name</label>
+            <input class="modal-form-input" type="text" id="modal-name" name="name" placeholder="James Mitchell" autocomplete="name" required>
+          </div>
+          <div class="modal-form-group">
+            <label class="modal-form-label" for="modal-business">Business name</label>
+            <input class="modal-form-input" type="text" id="modal-business" name="business" placeholder="Mitchell Plumbing Ltd" required>
+          </div>
+        </div>
+        <div class="modal-form-row">
+          <div class="modal-form-group">
+            <label class="modal-form-label" for="modal-email">Email address</label>
+            <input class="modal-form-input" type="email" id="modal-email" name="email" placeholder="james@mitchellplumbing.co.uk" autocomplete="email" required>
+          </div>
+          <div class="modal-form-group">
+            <label class="modal-form-label" for="modal-phone">Phone number</label>
+            <input class="modal-form-input" type="tel" id="modal-phone" name="phone" placeholder="+44 7700 000000" autocomplete="tel" required>
+          </div>
+        </div>
+        <div class="modal-form-group">
+          <label class="modal-form-label" for="modal-website">Current website <span class="modal-form-optional">(optional)</span></label>
+          <input class="modal-form-input" type="url" id="modal-website" name="website" placeholder="https://www.example.co.uk">
+        </div>
+        <div class="modal-form-group">
+          <label class="modal-form-label" for="modal-comments">Anything else we should know? <span class="modal-form-optional">(optional)</span></label>
+          <textarea class="modal-form-input modal-form-textarea" id="modal-comments" name="comments" placeholder="Tell us about your business, the areas you cover, any inspiration, or links we should look at before designing your site…" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg modal-form-submit">Request My Free Website</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var overlay = document.getElementById('promo-modal');
+      var closeBtn = document.getElementById('promo-modal-close');
+      var openBtns = document.querySelectorAll('#promo-modal-open, #promo-modal-open-footer');
+
+      function openModal() {
+        overlay.classList.add('modal-overlay--open');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeModal() {
+        overlay.classList.remove('modal-overlay--open');
+        document.body.style.overflow = '';
+      }
+
+      openBtns.forEach(function(btn) { btn.addEventListener('click', openModal); });
+      closeBtn.addEventListener('click', closeModal);
+      overlay.addEventListener('click', function(e) { if (e.target === overlay) closeModal(); });
+      document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeModal(); });
+    })();
+  </script>
+</BaseLayout>

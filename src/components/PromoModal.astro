@@ -1,0 +1,69 @@
+---
+---
+<!-- ============================================================
+     FREE WEBSITE MODAL
+============================================================ -->
+<div class="modal-overlay" id="promo-modal" aria-modal="true" role="dialog" aria-labelledby="modal-title">
+  <div class="modal-card">
+    <button class="modal-close" id="promo-modal-close" aria-label="Close">&#x2715;</button>
+    <h3 id="modal-title" style="font-size: 24px; font-weight: 600; color: var(--dark); margin-bottom: 12px;">Get Your Free Website</h3>
+    <p style="font-size: 15px; color: var(--body-text); margin-bottom: 20px;">Tell us about your business and we'll design your free site.</p>
+    <form class="modal-form" action="#" method="post">
+      <div class="modal-form-row">
+        <div class="modal-form-group">
+          <label class="modal-form-label" for="modal-name">Your name</label>
+          <input class="modal-form-input" type="text" id="modal-name" name="name" placeholder="James Mitchell" autocomplete="name" required>
+        </div>
+        <div class="modal-form-group">
+          <label class="modal-form-label" for="modal-business">Business name</label>
+          <input class="modal-form-input" type="text" id="modal-business" name="business" placeholder="Mitchell Plumbing Ltd" required>
+        </div>
+      </div>
+      <div class="modal-form-row">
+        <div class="modal-form-group">
+          <label class="modal-form-label" for="modal-email">Email address</label>
+          <input class="modal-form-input" type="email" id="modal-email" name="email" placeholder="james@mitchellplumbing.co.uk" autocomplete="email" required>
+        </div>
+        <div class="modal-form-group">
+          <label class="modal-form-label" for="modal-phone">Phone number</label>
+          <input class="modal-form-input" type="tel" id="modal-phone" name="phone" placeholder="+44 7700 000000" autocomplete="tel" required>
+        </div>
+      </div>
+      <div class="modal-form-group">
+        <label class="modal-form-label" for="modal-website">Current website <span class="modal-form-optional">(optional)</span></label>
+        <input class="modal-form-input" type="url" id="modal-website" name="website" placeholder="https://www.example.co.uk">
+      </div>
+      <div class="modal-form-group">
+        <label class="modal-form-label" for="modal-comments">Anything else we should know? <span class="modal-form-optional">(optional)</span></label>
+        <textarea class="modal-form-input modal-form-textarea" id="modal-comments" name="comments" placeholder="Tell us about your business, the areas you cover, any inspiration, or links we should look at before designing your site…" rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary btn-lg modal-form-submit">Request My Free Website</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  // Use DOMContentLoaded to make sure all buttons are rendered
+  document.addEventListener('DOMContentLoaded', () => {
+    const overlay = document.getElementById('promo-modal');
+    const closeBtn = document.getElementById('promo-modal-close');
+    // Using attribute selector handles multiple elements with the same ID, since standard # might only return first
+    const openBtns = document.querySelectorAll('[id="promo-modal-open"]');
+
+    if (!overlay || !closeBtn) return;
+
+    function openModal() {
+      overlay.classList.add('modal-overlay--open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+      overlay.classList.remove('modal-overlay--open');
+      document.body.style.overflow = '';
+    }
+
+    openBtns.forEach(btn => btn.addEventListener('click', openModal));
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+  });
+</script>

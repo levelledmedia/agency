@@ -1,0 +1,522 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TestimonialsSection from '../components/TestimonialsSection.astro';
+---
+
+<BaseLayout
+  title="Local SEO for Home Service Businesses — Levelled Media"
+  description="Local SEO for home service businesses — we improve your Google Maps rankings and organic search visibility so homeowners in your area find you first."
+>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section class="hero-section hero-section--compact" id="hero">
+    <div class="container">
+      <div class="hero-inner" style="align-items: center; text-align: center;">
+
+        <div class="hero-badge fade-up">
+          <span class="badge-dot"></span>
+          Local SEO
+        </div>
+
+        <h1 class="hero-title fade-up">Show up when homeowners<br>are ready to book</h1>
+
+        <p class="hero-subtitle fade-up" style="max-width: 640px; margin-left: auto; margin-right: auto;">
+          We improve your Google Maps rankings and organic search visibility so your business is the first thing homeowners in your area see when they need your services.
+        </p>
+
+        <div class="hero-ctas fade-up">
+          <a href="/pricing" class="btn btn-primary btn-lg">See pricing</a>
+          <a href="#faq" class="btn btn-secondary btn-lg">Learn more</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <style>
+    /* 3. SEO Local Rank Animation (Search Results) */
+    /* 3. SEO Local Rank Animation (Search Results) */
+    .ui-seo {
+      background: transparent;
+      width: 100%;
+      height: 100%;
+      padding: 32px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      justify-content: center;
+    }
+
+    .ui-search-bar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 20px;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 24px;
+      box-shadow: none;
+    }
+
+    .ui-search-icon {
+      width: 16px;
+      height: 16px;
+      border: 2px solid #94a3b8;
+      border-radius: 50%;
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .ui-search-icon::after {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 2px;
+      background: #94a3b8;
+      right: -6px;
+      bottom: -2px;
+      transform: rotate(45deg);
+    }
+
+    .ui-search-text {
+      font-size: 16px;
+      color: transparent;
+      font-family: monospace;
+      position: relative;
+      display: inline-block;
+    }
+
+    .ui-search-text::before {
+      content: "plumber near me";
+      color: transparent;
+      animation: wordCycle 32s infinite;
+      white-space: nowrap;
+    }
+
+    .ui-search-text::after {
+      content: "plumber near me";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      color: #002C15;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid #002C15;
+      animation: wordCycle 32s infinite, typing 8s steps(18, end) infinite, blink-caret .75s step-end infinite;
+    }
+
+    .ui-results {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: relative;
+    }
+
+    .ui-res-item {
+      width: 100%;
+      height: 100px;
+      box-sizing: border-box;
+      background: #fff;
+      border-radius: 16px;
+      padding: 20px 24px;
+      box-shadow: none;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      border: 1px solid #e2e8f0;
+      opacity: 0;
+      position: relative;
+    }
+
+    .ui-res-item:nth-child(1) {
+      animation: resFade1 8s infinite;
+      z-index: 10;
+    }
+
+    .ui-res-item:nth-child(2) {
+      animation: resFade2 8s infinite;
+      z-index: 2;
+    }
+
+    .ui-res-item:nth-child(3) {
+      animation: resFade3 8s infinite;
+      z-index: 1;
+    }
+
+    .ui-res-item:nth-child(4) {
+      animation: resFade4 8s infinite;
+      z-index: 1;
+    }
+
+    .ui-seo-badge {
+      position: absolute;
+      top: -12px;
+      right: 16px;
+      background: var(--green);
+      color: var(--dark);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 12px;
+    }
+
+    .ui-res-item.is-yours .agbp-avatar {
+      background: var(--dark);
+    }
+
+    .ui-res-lines {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .ui-res-title {
+      height: 14px;
+      width: 60%;
+      background: #94a3b8;
+      border-radius: 4px;
+    }
+
+    .ui-res-item.is-yours .ui-res-title {
+      background: var(--dark);
+      width: 75%;
+    }
+
+    .ui-res-rating {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .ui-res-stars {
+      color: #fbbf24;
+      font-size: 14px;
+      line-height: 1;
+    }
+
+    .ui-res-reviews {
+      height: 8px;
+      width: 40px;
+      background: #e2e8f0;
+      border-radius: 4px;
+    }
+
+    .ui-res-desc {
+      height: 8px;
+      width: 80%;
+      background: #f1f5f9;
+      border-radius: 4px;
+    }
+
+    @keyframes typing {
+
+      0%,
+      2% {
+        max-width: 0%;
+      }
+
+      17%,
+      92% {
+        max-width: 100%;
+      }
+
+      98%,
+      100% {
+        max-width: 0%;
+      }
+    }
+
+    @keyframes wordCycle {
+
+      0%,
+      24.99% {
+        content: "plumber near me";
+      }
+
+      25%,
+      49.99% {
+        content: "roofer near me";
+      }
+
+      50%,
+      74.99% {
+        content: "landscaper near me";
+      }
+
+      75%,
+      100% {
+        content: "electrician near me";
+      }
+    }
+
+    @keyframes blink-caret {
+
+      from,
+      to {
+        border-right-color: transparent
+      }
+
+      50% {
+        border-right-color: #002C15;
+      }
+    }
+
+    @keyframes resFade1 {
+
+      0%,
+      18% {
+        transform: translateY(10px);
+        opacity: 0;
+      }
+
+      22%,
+      96% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      98%,
+      100% {
+        transform: translateY(10px);
+        opacity: 0;
+      }
+    }
+
+    @keyframes resFade2 {
+
+      0%,
+      19% {
+        transform: translateY(10px);
+        opacity: 0;
+      }
+
+      23%,
+      95% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      97%,
+      100% {
+        transform: translateY(10px);
+        opacity: 0;
+      }
+    }
+
+    @keyframes resFade3 {
+
+      0%,
+      20% {
+        transform: translateY(10px);
+        opacity: 0;
+      }
+
+      24%,
+      94% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      96%,
+      100% {
+        transform: translateY(10px);
+        opacity: 0;
+      }
+    }
+
+    @keyframes resFade4 {
+
+      0%,
+      21% {
+        transform: translateY(10px);
+        opacity: 0;
+      }
+
+      25%,
+      93% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      95%,
+      100% {
+        transform: translateY(10px);
+        opacity: 0;
+      }
+    }
+
+
+  </style>
+
+  <section class="detail-section" id="our-approach">
+    <!-- Block 3: Text Left, Visual Right -->
+    <div class="detail-block detail-block--light">
+      <div class="container detail-inner">
+        <div class="detail-content fade-up">
+          <p class="eyebrow">Our approach</p>
+          <h2 class="section-title">Built to rank and<br>convert from day one</h2>
+          <p class="detail-body">We combine conversion-focused design with technical SEO from day one, building websites
+            that both attract traffic and turn that traffic into real inquiries.</p>
+          <ul class="checklist">
+            <li><span class="check-icon"></span>Strategic page layouts built around homeowner intent</li>
+            <li><span class="check-icon"></span>Dedicated service and location pages for search visibility</li>
+            <li><span class="check-icon"></span>Mobile-first builds with speed and performance in mind</li>
+          </ul>
+          <a href="#" class="btn btn-primary btn-lg">See Our Website Approach</a>
+        </div>
+        <div class="detail-visual fade-up">
+          <div class="ui-graphic" style="background: transparent; border: none; box-shadow: none;">
+            <div class="ui-seo">
+              <div class="ui-search-bar">
+                <div class="ui-search-icon"></div>
+                <div class="ui-search-text"></div>
+              </div>
+              <div class="ui-results">
+                <!-- Target stays at top -->
+                <div class="ui-res-item is-yours">
+                  <div class="ui-seo-badge">You</div>
+                  <div class="agbp-avatar"></div>
+                  <div class="ui-res-lines">
+                    <div class="ui-res-title"></div>
+                    <div class="ui-res-rating"><span class="ui-res-stars">★★★★★</span>
+                      <div class="ui-res-reviews"></div>
+                    </div>
+                    <div class="ui-res-desc"></div>
+                  </div>
+                </div>
+                <div class="ui-res-item">
+                  <div class="agbp-avatar"></div>
+                  <div class="ui-res-lines">
+                    <div class="ui-res-title"></div>
+                    <div class="ui-res-rating"><span class="ui-res-stars">★★★★</span>
+                      <div class="ui-res-reviews"></div>
+                    </div>
+                    <div class="ui-res-desc"></div>
+                  </div>
+                </div>
+                <div class="ui-res-item">
+                  <div class="agbp-avatar"></div>
+                  <div class="ui-res-lines">
+                    <div class="ui-res-title"></div>
+                    <div class="ui-res-rating"><span class="ui-res-stars">★★★★</span>
+                      <div class="ui-res-reviews"></div>
+                    </div>
+                    <div class="ui-res-desc"></div>
+                  </div>
+                </div>
+                <div class="ui-res-item">
+                  <div class="agbp-avatar"></div>
+                  <div class="ui-res-lines">
+                    <div class="ui-res-title"></div>
+                    <div class="ui-res-rating"><span class="ui-res-stars">★★★★</span>
+                      <div class="ui-res-reviews"></div>
+                    </div>
+                    <div class="ui-res-desc"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+  <!-- ============================================================
+       TRUSTED BY — 3 testimonial cards
+  ============================================================ -->
+  <TestimonialsSection />
+
+  <!-- ============================================================
+       FAQ — LOCAL SEO
+  ============================================================ -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="faq-inner fade-up">
+        <div class="faq-content">
+          <p class="eyebrow">SEO questions</p>
+          <h2 class="section-title">Questions &amp;<br>Answers</h2>
+          <p class="faq-sub">Everything you need to know about local SEO for home service businesses. Still have questions? Just get in touch.</p>
+          <a href="#" class="btn btn-secondary">Contact Us</a>
+        </div>
+
+        <div class="faq-list">
+          <div class="accordion-item" data-accordion>
+            <button class="accordion-trigger">
+              How long does SEO take to show results?
+              <span class="accordion-icon"></span>
+            </button>
+            <div class="accordion-body">
+              SEO is a long-term investment. Most clients start seeing meaningful ranking and traffic gains within 3–6 months, with results compounding and strengthening over time.
+            </div>
+          </div>
+          <div class="accordion-item" data-accordion>
+            <button class="accordion-trigger">
+              What does local SEO actually involve?
+              <span class="accordion-icon"></span>
+            </button>
+            <div class="accordion-body">
+              Local SEO covers everything from optimising your Google Business Profile and building local citations to creating location and service pages on your website and improving your overall search authority in your target area.
+            </div>
+          </div>
+          <div class="accordion-item" data-accordion>
+            <button class="accordion-trigger">
+              Do I need a new website for SEO to work?
+              <span class="accordion-icon"></span>
+            </button>
+            <div class="accordion-body">
+              Not necessarily. We can work with an existing site. However, if your current site is slow, poorly structured, or missing key pages, a rebuild will significantly improve what's possible with SEO.
+            </div>
+          </div>
+          <div class="accordion-item" data-accordion>
+            <button class="accordion-trigger">
+              What areas do you cover?
+              <span class="accordion-icon"></span>
+            </button>
+            <div class="accordion-body">
+              We're based in Essex but work with home service businesses across the UK. Location is no barrier, and we've helped tradespeople from Scotland to the South Coast.
+            </div>
+          </div>
+          <div class="accordion-item" data-accordion>
+            <button class="accordion-trigger">
+              How do you measure and report on results?
+              <span class="accordion-icon"></span>
+            </button>
+            <div class="accordion-body">
+              Every month you receive a clear report covering your keyword rankings, website traffic, Google Business Profile performance, and enquiry volumes, so you always know exactly what's happening and what we're doing about it.
+            </div>
+          </div>
+          <div class="accordion-item" data-accordion>
+            <button class="accordion-trigger">
+              Can I target multiple service areas?
+              <span class="accordion-icon"></span>
+            </button>
+            <div class="accordion-body">
+              Yes. We build dedicated location pages targeting the specific towns and areas your business operates in, helping you rank across a wider geographic footprint over time.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PRE-FOOTER CTA
+  ============================================================ -->
+  <section class="final-cta-section">
+    <div class="container text-center fade-up">
+      <h2 class="section-title">Ready to start ranking<br>in your local area?</h2>
+      <p class="final-cta-sub">Get your free website and local SEO strategy today.</p>
+      <a href="/pricing" class="btn btn-primary btn-xl">See pricing</a>
+    </div>
+  </section>
+
+
+
+</BaseLayout>

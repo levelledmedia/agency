@@ -1,0 +1,115 @@
+<!-- ============================================================
+     ALTERNATIVE TESTIMONIAL CAROUSEL - VIDEO ONLY
+     Static grid with 3 video testimonials (can be reverted to scrolling carousel when more videos available)
+============================================================ -->
+<section class="auto-social-section auto-social-section--video">
+  <div class="auto-social-header fade-up">
+    <h2 class="section-title">What our clients say</h2>
+    <p class="auto-social-sub">Real results from real home service businesses across the UK — from more enquiries to
+      fully booked weeks.</p>
+  </div>
+
+  <div class="container">
+    <!-- Static grid layout (no scrolling) -->
+    <div class="video-testimonials-grid fade-up">
+
+      <!-- Video Testimonial 1 -->
+      <div class="auto-testimonial-card auto-testimonial-card--video">
+        <div class="auto-video-wrapper">
+          <div class="auto-video-placeholder">
+            <span>Video placeholder</span>
+          </div>
+        </div>
+        <div class="auto-video-content">
+          <div class="auto-reviewer-info">
+            <span class="auto-reviewer-name">James Mitchell</span>
+            <span class="auto-reviewer-company">Mitchell Plumbing Ltd</span>
+          </div>
+          <div class="auto-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="auto-video-quote">"Our online presence finally matches the quality of our work."</p>
+        </div>
+      </div>
+
+      <!-- Video Testimonial 2 -->
+      <div class="auto-testimonial-card auto-testimonial-card--video">
+        <div class="auto-video-wrapper">
+          <div class="auto-video-placeholder">
+            <span>Video placeholder</span>
+          </div>
+        </div>
+        <div class="auto-video-content">
+          <div class="auto-reviewer-info">
+            <span class="auto-reviewer-name">Sarah Reynolds</span>
+            <span class="auto-reviewer-company">Reynolds HVAC Services</span>
+          </div>
+          <div class="auto-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="auto-video-quote">"We're seeing steady growth in calls each month."</p>
+        </div>
+      </div>
+
+      <!-- Video Testimonial 3 -->
+      <div class="auto-testimonial-card auto-testimonial-card--video">
+        <div class="auto-video-wrapper">
+          <div class="auto-video-placeholder">
+            <span>Video placeholder</span>
+          </div>
+        </div>
+        <div class="auto-video-content">
+          <div class="auto-reviewer-info">
+            <span class="auto-reviewer-name">Tom Clarke</span>
+            <span class="auto-reviewer-company">Clarke Electrical</span>
+          </div>
+          <div class="auto-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="auto-video-quote">"The site looks great and performs even better."</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!--
+  TO REVERT TO SCROLLING CAROUSEL:
+  1. Replace .video-testimonials-grid with .auto-carousel-wrap and .auto-carousel-track
+  2. Add back the additional video cards (4 and 5)
+  3. Uncomment the script below
+-->
+
+<!--
+<script>
+  // Auto-scroll carousel with video cards
+  (function () {
+    const track = document.getElementById('auto-carousel-track-video');
+    if (!track) return;
+
+    const cards = Array.from(track.children);
+    const cloneCount = cards.length;
+
+    // Clone all cards to create seamless loop
+    cards.forEach((card) => {
+      const clone = card.cloneNode(true);
+      track.appendChild(clone);
+    });
+
+    let scrollPosition = 0;
+    const speed = 0.3; // pixels per frame
+    const cardWidth = 360; // base card width
+    const gap = 24;
+    const resetPoint = (cardWidth + gap) * cloneCount;
+
+    function scroll() {
+      scrollPosition += speed;
+
+      if (scrollPosition >= resetPoint) {
+        scrollPosition = 0;
+      }
+
+      track.style.transform = `translateX(-${scrollPosition}px)`;
+      requestAnimationFrame(scroll);
+    }
+
+    requestAnimationFrame(scroll);
+  })();
+</script>
+-->
