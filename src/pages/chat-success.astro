@@ -1,0 +1,116 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Booking Confirmed — Levelled Media"
+  description="Your call has been booked with Levelled Media."
+  minimalHeader={true}
+  hideFooter={true}
+  disableLogoLink={true}
+  pixelEvent="Lead"
+  pageStyles={`
+    .nav-header {
+      position: static !important;
+      top: auto !important;
+      box-shadow: none !important;
+      border-bottom: none !important;
+      transition: none !important;
+    }
+
+    .nav-header--minimal .nav-inner {
+      justify-content: center;
+    }
+
+    .nav-header.scrolled {
+      position: static !important;
+      box-shadow: none !important;
+      border-bottom: none !important;
+      background: var(--dark);
+    }
+
+    .success-section {
+      padding: 56px 0 96px;
+    }
+
+    .success-panel-wrap {
+      max-width: none;
+      width: 100%;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    .success-panel {
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      background: var(--white);
+      border: 1px solid rgba(0,33,43,0.08);
+      border-radius: 28px;
+      box-shadow: var(--shadow-mock);
+      padding: 56px 40px;
+      text-align: center;
+    }
+
+    .success-title {
+      margin: 0 auto 16px;
+      max-width: 680px;
+    }
+
+    .success-copy {
+      max-width: 620px;
+      margin: 0 auto;
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--body-text);
+    }
+
+    .schedule-subfooter {
+      padding: 8px 0 12px;
+      border-top: 1px solid rgba(0,33,43,0.1);
+      background: var(--soft-bg);
+    }
+
+    .schedule-subfooter-inner {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .schedule-subfooter-copy {
+      font-size: 13px;
+      color: var(--body-text);
+    }
+
+    @media (max-width: 768px) {
+      .success-section {
+        padding: 40px 0 72px;
+      }
+
+      .success-panel {
+        padding: 40px 24px;
+      }
+
+      .success-copy {
+        font-size: 16px;
+      }
+    }
+  `}
+>
+  <section class="success-section">
+    <div class="container success-panel-wrap">
+      <div class="success-panel fade-up">
+        <h1 class="hero-title success-title">Call booked.</h1>
+        <p class="success-copy">
+          Your booking is confirmed. We’ll call you at the time you selected and talk through how to get your business higher on Google.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="schedule-subfooter">
+    <div class="container schedule-subfooter-inner">
+      <p class="schedule-subfooter-copy">© 2026 Levelled Media. All rights reserved.</p>
+    </div>
+  </div>
+</BaseLayout>
