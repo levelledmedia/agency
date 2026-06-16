@@ -6,9 +6,13 @@ interface Props {
   title: string;
   description: string;
   pageStyles?: string;
+  minimalHeader?: boolean;
+  minimalFooter?: boolean;
+  hideFooter?: boolean;
+  disableLogoLink?: boolean;
 }
 
-const { title, description, pageStyles = '' } = Astro.props;
+const { title, description, pageStyles = '', minimalHeader = false, minimalFooter = false, hideFooter = false, disableLogoLink = false } = Astro.props;
 const isDev = import.meta.env.DEV;
 const baseUrl = import.meta.env.BASE_URL;
 ---
@@ -26,35 +30,49 @@ const baseUrl = import.meta.env.BASE_URL;
   {pageStyles && <style set:html={pageStyles} />}
 </head>
 <body>
-  <header class="nav-header" id="nav-header">
-    <div class="container nav-inner">
-      <a href="/" class="nav-logo">
-        <img src={baseUrl + "logo-lime.png"} alt="Levelled Media" class="nav-logo-icon nav-logo-icon--lime">
-        <img src={baseUrl + "logo-dark.png"} alt="Levelled Media" class="nav-logo-icon nav-logo-icon--dark">
-      </a>
+  <header class:list={["nav-header", { "nav-header--minimal": minimalHeader }]} id="nav-header">
+    <div class:list={["container", "nav-inner", { "nav-inner--minimal": minimalHeader }]}>
+      {disableLogoLink ? (
+        <span class:list={["nav-logo", { "nav-logo--centered": minimalHeader }]} aria-label="Levelled Media">
+          <img src={baseUrl + "logo-lime.png"} alt="Levelled Media" class="nav-logo-icon nav-logo-icon--lime">
+          <img src={baseUrl + "logo-dark.png"} alt="Levelled Media" class="nav-logo-icon nav-logo-icon--dark">
+        </span>
+      ) : (
+        <a href="/" class:list={["nav-logo", { "nav-logo--centered": minimalHeader }]}>
+          <img src={baseUrl + "logo-lime.png"} alt="Levelled Media" class="nav-logo-icon nav-logo-icon--lime">
+          <img src={baseUrl + "logo-dark.png"} alt="Levelled Media" class="nav-logo-icon nav-logo-icon--dark">
+        </a>
+      )}
 
-      <nav class="nav-links" id="nav-links">
-        <ul>
-          {isDev && <li><a href="/about">Company</a></li>}
-          {isDev && <li><a href="/pricing">Pricing</a></li>}
-        </ul>
-      </nav>
+      {!minimalHeader && (
+        <>
+          <nav class="nav-links" id="nav-links">
+            <ul>
+              {isDev && <li><a href="/about">Company</a></li>}
+              {isDev && <li><a href="/pricing">Pricing</a></li>}
+            </ul>
+          </nav>
 
-      <div class="nav-actions">
-        <a href="/contact" class="btn btn-ghost btn-nav">Contact</a>
-        <button class="btn btn-primary btn-nav" id="promo-modal-open">Free website</button>
-      </div>
+          <div class="nav-actions">
+            <a href="/contact" class="btn btn-ghost btn-nav">Contact</a>
+            <button class="btn btn-primary btn-nav" id="promo-modal-open">Free website</button>
+          </div>
 
-      <button class="nav-burger" id="nav-burger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
+          <button class="nav-burger" id="nav-burger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+        </>
+      )}
     </div>
   </header>
 
   <slot />
 
+  {!hideFooter && (
   <footer class="footer" id="footer">
-    <div class="container footer-inner">
+    <div class:list={["container", "footer-inner", { "footer-inner--minimal": minimalFooter }]}>
+      {!minimalFooter && (
+        <>
       <div class="footer-brand">
         <a href="/" class="nav-logo footer-logo">
           <img src={baseUrl + "logo-dark.png"} alt="Levelled Media" class="nav-logo-icon">
@@ -120,14 +138,17 @@ const baseUrl = import.meta.env.BASE_URL;
           </a>
         </div>
       </div>}
+        </>
+      )}
     </div>
 
     <div class="subfooter">
-      <div class="container subfooter-inner">
+      <div class:list={["container", "subfooter-inner", { "subfooter-inner--minimal": minimalFooter }]}>
         <p class="subfooter-copy">© 2026 Levelled Media. All rights reserved.</p>
       </div>
     </div>
   </footer>
+  )}
 
   <PromoModal />
   <script src="../scripts/main.js"></script>

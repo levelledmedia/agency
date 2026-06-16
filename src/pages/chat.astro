@@ -1,0 +1,161 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Schedule a Call — Levelled Media"
+  description="Schedule a call with Levelled Media. Book a quick conversation about getting your local business into the top 3 on Google Maps."
+  minimalHeader={true}
+  hideFooter={true}
+  disableLogoLink={true}
+  pageStyles={`
+    .nav-header {
+      position: static !important;
+      top: auto !important;
+      box-shadow: none !important;
+      border-bottom: none !important;
+      transition: none !important;
+    }
+
+    .nav-header--minimal .nav-inner {
+      justify-content: center;
+    }
+
+    .nav-header.scrolled {
+      position: static !important;
+      box-shadow: none !important;
+      border-bottom: none !important;
+      background: var(--dark);
+    }
+
+    .schedule-hero .hero-inner--centered {
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-subtitle {
+      max-width: 620px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-section--compact {
+      padding-bottom: 72px;
+    }
+
+    .pricing-section {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .schedule-booking-container {
+      max-width: none;
+      width: 100%;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    .schedule-booking-box {
+      width: 100%;
+      max-width: none;
+      background: var(--white);
+      border: 1px solid rgba(0,33,43,0.08);
+      border-radius: 28px;
+      box-shadow: var(--shadow-mock);
+      padding: 24px;
+      overflow: hidden;
+      margin-top: -36px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .schedule-booking-box #appointment_widgets--revamp,
+    .schedule-booking-box .appointment_widgets--revamp,
+    .schedule-booking-box .hl-app {
+      width: 100% !important;
+      max-width: none !important;
+      box-sizing: border-box !important;
+      padding: 16px 0 16px !important;
+      margin: 0 !important;
+    }
+
+    .schedule-booking-box .appointment_widgets--revamp--steps.full-width.default-form {
+      padding: 30px 35px 30px 35px !important;
+      box-sizing: border-box !important;
+    }
+
+    .schedule-embed-wrap iframe {
+      display: block;
+      width: 100%;
+      min-height: 760px;
+      border: none;
+      overflow: hidden;
+      background: transparent;
+    }
+
+    .schedule-subfooter {
+      padding: 8px 0 12px;
+      border-top: 1px solid rgba(0,33,43,0.1);
+      background: var(--soft-bg);
+    }
+
+    .schedule-subfooter-inner {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .schedule-subfooter-copy {
+      font-size: 13px;
+      color: var(--body-text);
+    }
+
+    @media (max-width: 768px) {
+      .hero-section--compact {
+        padding-bottom: 48px;
+      }
+
+      .schedule-booking-box {
+        margin-top: -24px;
+      }
+
+    }
+  `}
+>
+  <section class="hero-section hero-section--compact schedule-hero" id="hero">
+    <div class="container hero-inner hero-inner--centered">
+      <h1 class="hero-title fade-up">Top 3 on Google in just 90 days</h1>
+
+      <p class="hero-subtitle fade-up">
+        More calls. More customers. Steady business. Click below to schedule a time for us to give you a call.
+      </p>
+
+    </div>
+  </section>
+
+  <section class="pricing-section" id="contact-form">
+    <div class="container schedule-booking-container">
+      <div class="schedule-booking-box fade-up">
+        <div class="schedule-embed-wrap">
+          <iframe
+            src="https://api.leadconnectorhq.com/widget/booking/g7YqZCAwdfY8t8jNHOH3"
+            style="width: 100%; border: none; overflow: hidden; min-height: 760px; display: block;"
+            scrolling="no"
+            id="g7YqZCAwdfY8t8jNHOH3_1781599635502"
+            title="Book a call"
+            loading="lazy"
+          ></iframe>
+          <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="schedule-subfooter">
+    <div class="container schedule-subfooter-inner">
+      <p class="schedule-subfooter-copy">© 2026 Levelled Media. All rights reserved.</p>
+    </div>
+  </div>
+</BaseLayout>
