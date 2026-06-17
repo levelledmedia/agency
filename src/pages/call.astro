@@ -94,6 +94,24 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       background: transparent;
     }
 
+    .schedule-fallback {
+      margin-top: 14px;
+      text-align: center;
+    }
+
+    .schedule-fallback-link {
+      font-size: 13px;
+      line-height: 1.5;
+      color: rgba(0, 33, 43, 0.65);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.2s ease;
+    }
+
+    .schedule-fallback-link:hover {
+      color: var(--dark);
+    }
+
     .schedule-subfooter {
       padding: 8px 0 12px;
       border-top: 1px solid rgba(0,33,43,0.1);
@@ -151,10 +169,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             scrolling="no"
             id="usfaf27osHSGrKKhwVG0_1781712262213"
             title="Book a call"
-            loading="lazy"
           ></iframe>
           <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
         </div>
+        <p class="schedule-fallback">
+          <a
+            class="schedule-fallback-link"
+            href="https://api.leadconnectorhq.com/widget/booking/usfaf27osHSGrKKhwVG0"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            If the calendar doesn’t load, open the booking page directly.
+          </a>
+        </p>
       </div>
 
     </div>
