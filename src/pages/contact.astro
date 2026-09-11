@@ -188,84 +188,8 @@ import TestimonialsSection from '../components/TestimonialsSection.astro';
   <section class="final-cta-section">
     <div class="container text-center fade-up">
       <h2 class="section-title">Ready to get started?</h2>
-      <p class="final-cta-sub">Get your free website and start generating more local inquiries today.</p>
-      <button class="btn btn-primary btn-xl" id="promo-modal-open-footer">Request my free website</button>
+      <p class="final-cta-sub">Book a quick call and we'll show you how to bring in more customers online, starting with a plan built around your business.</p>
+      <a href="/call" class="btn btn-primary btn-xl">Book a quick call</a>
     </div>
   </section>
-
-  <!-- ============================================================
-       FREE WEBSITE MODAL
-  ============================================================ -->
-  <div class="modal-overlay" id="promo-modal" aria-modal="true" role="dialog" aria-labelledby="modal-title">
-    <div class="modal-card">
-      <button class="modal-close" id="promo-modal-close" aria-label="Close">&#x2715;</button>
-      <form class="modal-form" action="#" method="post">
-        <div class="modal-form-row">
-          <div class="modal-form-group">
-            <label class="modal-form-label" for="modal-name">Your name</label>
-            <input class="modal-form-input" type="text" id="modal-name" name="name" placeholder="James Mitchell" autocomplete="name" required>
-          </div>
-          <div class="modal-form-group">
-            <label class="modal-form-label" for="modal-business">Business name</label>
-            <input class="modal-form-input" type="text" id="modal-business" name="business" placeholder="Mitchell Plumbing Ltd" required>
-          </div>
-        </div>
-        <div class="modal-form-row">
-          <div class="modal-form-group">
-            <label class="modal-form-label" for="modal-email">Email address</label>
-            <input class="modal-form-input" type="email" id="modal-email" name="email" placeholder="james@mitchellplumbing.co.uk" autocomplete="email" required>
-          </div>
-          <div class="modal-form-group">
-            <label class="modal-form-label" for="modal-phone">Phone number</label>
-            <input class="modal-form-input" type="tel" id="modal-phone" name="phone" placeholder="+44 7700 000000" autocomplete="tel" required>
-          </div>
-        </div>
-        <div class="modal-form-group">
-          <label class="modal-form-label" for="modal-website">Current website <span class="modal-form-optional">(optional)</span></label>
-          <input class="modal-form-input" type="url" id="modal-website" name="website" placeholder="https://www.example.co.uk">
-        </div>
-        <div class="modal-form-group">
-          <label class="modal-form-label" for="modal-comments">Anything else we should know? <span class="modal-form-optional">(optional)</span></label>
-          <textarea class="modal-form-input modal-form-textarea" id="modal-comments" name="comments" placeholder="Tell us about your business, the areas you cover, any inspiration, or links we should look at before designing your site…" rows="3"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary btn-lg modal-form-submit">Request My Free Website</button>
-      </form>
-    </div>
-  </div>
-
-  <script>
-    (function () {
-      var overlay = document.getElementById('promo-modal');
-      var openBtns = [
-        document.getElementById('promo-modal-open-footer')
-      ];
-      var closeBtn = document.getElementById('promo-modal-close');
-
-      function openModal() {
-        overlay.classList.add('modal-overlay--open');
-        document.body.style.overflow = 'hidden';
-      }
-
-      function closeModal() {
-        overlay.classList.remove('modal-overlay--open');
-        document.body.style.overflow = '';
-      }
-
-      openBtns.forEach(function(btn) {
-        if (btn) {
-          btn.addEventListener('click', openModal);
-        }
-      });
-
-      if (closeBtn) {
-        closeBtn.addEventListener('click', closeModal);
-      }
-      overlay.addEventListener('click', function (e) {
-        if (e.target === overlay) closeModal();
-      });
-      document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') closeModal();
-      });
-    })();
-  </script>
 </BaseLayout>

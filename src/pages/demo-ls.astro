@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Demo Video — Levelled Media"
+  description="Watch a quick demo video from Levelled Media."
+  minimalHeader={true}
+  hideFooter={true}
+  disableLogoLink={true}
+  pageStyles={`
+    .nav-header {
+      position: static !important;
+      top: auto !important;
+      box-shadow: none !important;
+      border-bottom: none !important;
+      transition: none !important;
+    }
+
+    .nav-header--minimal .nav-inner {
+      justify-content: center;
+    }
+
+    .nav-header.scrolled {
+      position: static !important;
+      box-shadow: none !important;
+      border-bottom: none !important;
+      background: var(--dark);
+    }
+
+    .demo-section {
+      padding: 72px 0;
+      text-align: center;
+    }
+
+    .demo-panel-wrap {
+      max-width: none;
+      width: 100%;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    .demo-video-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .demo-video-wrap iframe {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      height: auto;
+      border: none;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0,33,43,0.06);
+    }
+
+    @media (max-width: 768px) {
+      .demo-section {
+        padding: 40px 0;
+      }
+    }
+  `}
+>
+  <section class="demo-section">
+    <div class="container demo-panel-wrap">
+      <div class="demo-video-wrap fade-up">
+        <iframe
+          src="https://share.zight.com/01a08eff-23f3-7a0e-8e3b-ba6624261716?embed=true"
+          frameborder="0"
+          scrolling="no"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowtransparency="true"
+          allowfullscreen="true"
+          title="Demo video"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

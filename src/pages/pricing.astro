@@ -5,7 +5,7 @@ import TestimonialsSection from '../components/TestimonialsSection.astro';
 
 <BaseLayout
   title="Pricing — Levelled Media"
-  description="Simple, transparent pricing for home service businesses. Get a free website and affordable local SEO that generates consistent inquiries."
+  description="Simple, transparent pricing for local businesses. £0 upfront, then a flat monthly plan that grows with you, from a professional website to full local SEO."
 >
   <!-- ============================================================
        HERO — PRICING
@@ -18,14 +18,14 @@ import TestimonialsSection from '../components/TestimonialsSection.astro';
         Simple, transparent pricing
       </div>
 
-      <h1 class="hero-title fade-up">Start with a free website. Choose your plan.</h1>
+      <h1 class="hero-title fade-up">Pricing that grows with your business</h1>
 
       <p class="hero-subtitle fade-up">
-        No complicated tiers, no hidden fees. Get your website built free, then choose the plan that fits your business, from essential hosting to full local SEO.
+        No contracts, no hidden costs. Just a simple monthly plan that includes everything you need to bring in more customers.
       </p>
 
       <div class="hero-ctas fade-up">
-        <button class="btn btn-primary btn-lg" id="promo-modal-open-hero">Get free website</button>
+        <a href="/call" class="btn btn-primary btn-lg">Book a Call</a>
         <a href="#faq" class="btn btn-secondary btn-lg">Common questions</a>
       </div>
 
@@ -40,70 +40,73 @@ import TestimonialsSection from '../components/TestimonialsSection.astro';
 
       <div class="pricing-header text-center fade-up">
         <p class="eyebrow">Pricing</p>
-        <h2 class="section-title">Start free. Grow monthly.</h2>
-        <p class="pricing-sub">Your website is built at no upfront cost. All you pay is a flat monthly retainer that covers hosting, SEO, updates, and ongoing optimisation.</p>
+        <h2 class="section-title">£0 upfront. Grow monthly.</h2>
+        <p class="pricing-sub">No hidden fees, no long contracts. Start capturing enquiries from day one, then add automation and local SEO as your business grows.</p>
       </div>
 
       <div class="pricing-grid fade-up">
 
-        <!-- Website Card (Free) -->
+        <!-- Starter Card -->
         <div class="plan-card plan-card--light">
           <div class="plan-card-top">
-            <p class="plan-label">Website</p>
+            <p class="plan-label">Starter</p>
             <div class="plan-price">
-              <span class="plan-price-amount">FREE</span>
+              <span class="plan-price-amount">£65</span>
+              <span class="plan-price-term">/ month</span>
             </div>
-            <p class="plan-desc">A professionally designed, conversion-focused website built for your business at no cost.</p>
+            <p class="plan-desc">Everything you need to start capturing enquiries online.</p>
           </div>
           <ul class="plan-features">
-            <li><span class="check-icon"></span>Custom design tailored to your trade</li>
-            <li><span class="check-icon"></span>Mobile-first and fast-loading</li>
-            <li><span class="check-icon"></span>Service &amp; location pages included</li>
-            <li><span class="check-icon"></span>Contact forms and click-to-call buttons</li>
-            <li><span class="check-icon"></span>You own it outright</li>
+            <li><span class="check-icon"></span>Professional website</li>
+            <li><span class="check-icon"></span>Built to capture enquiries</li>
+            <li><span class="check-icon"></span>AI chatbot for enquiries 24/7</li>
+            <li><span class="check-icon"></span>All leads sent to your phone</li>
+            <li><span class="check-icon"></span>Unlimited website edits</li>
           </ul>
-          <button class="btn btn-secondary btn-lg plan-cta" id="promo-modal-open">Request free website</button>
+          <a href="/call" class="btn btn-secondary btn-lg plan-cta">Book a Call</a>
         </div>
 
-        <!-- Google Booster Card (Featured) -->
+        <!-- Growth Card (Featured) -->
         <div class="plan-card plan-card--featured">
           <div class="plan-badge-tag">Recommended</div>
           <div class="plan-card-top">
-            <p class="plan-label">Google Booster</p>
+            <p class="plan-label">Growth</p>
             <div class="plan-price">
-              <span class="plan-price-amount">£299</span>
+              <span class="plan-price-amount">£199</span>
               <span class="plan-price-term">/ month</span>
             </div>
-            <p class="plan-desc">Everything you need to rank locally, generate inquiries, and keep your online presence performing.</p>
+            <p class="plan-desc">Automate the busywork so no enquiry slips through the cracks.</p>
           </div>
           <ul class="plan-features">
-            <li><span class="check-icon"></span>Everything in Essentials</li>
-            <li><span class="check-icon"></span>Local SEO &amp; Google Maps optimisation</li>
-            <li><span class="check-icon"></span>Monthly content &amp; page updates</li>
-            <li><span class="check-icon"></span>Google Business Profile management</li>
-            <li><span class="check-icon"></span>Monthly performance reporting</li>
-            <li><span class="check-icon"></span>Priority support</li>
+            <li><span class="check-icon"></span>Everything in Starter, plus:</li>
+            <li><span class="check-icon"></span>Reply to enquiries automatically</li>
+            <li><span class="check-icon"></span>Revive old leads automatically</li>
+            <li><span class="check-icon"></span>Win back missed-call leads</li>
+            <li><span class="check-icon"></span>Ask for reviews automatically</li>
+            <li><span class="check-icon"></span>Send automatic visit reminders</li>
+            <li><span class="check-icon"></span>Weekly social posts done for you</li>
           </ul>
-          <a href="#" class="btn btn-primary btn-lg plan-cta">Get started</a>
+          <a href="/call" class="btn btn-primary btn-lg plan-cta">Book a Call</a>
         </div>
 
-        <!-- Essentials Card -->
+        <!-- Professional Card -->
         <div class="plan-card plan-card--light">
           <div class="plan-card-top">
-            <p class="plan-label">Essentials</p>
+            <p class="plan-label">Professional</p>
             <div class="plan-price">
-              <span class="plan-price-amount">£49</span>
-              <span class="plan-price-term">/ month</span>
+              <span class="plan-price-amount" style="font-size: 34px;">Let's talk</span>
             </div>
-            <p class="plan-desc">Keep your website live with professional hosting, maintenance, and essential support.</p>
+            <p class="plan-desc">Get found first, everywhere your customers are searching.</p>
           </div>
           <ul class="plan-features">
-            <li><span class="check-icon"></span>Website hosting &amp; security</li>
-            <li><span class="check-icon"></span>Technical maintenance &amp; updates</li>
-            <li><span class="check-icon"></span>Performance monitoring</li>
-            <li><span class="check-icon"></span>Email support</li>
+            <li><span class="check-icon"></span>Everything else, plus:</li>
+            <li><span class="check-icon"></span>Show up higher on Google</li>
+            <li><span class="check-icon"></span>Rank higher on Google Maps</li>
+            <li><span class="check-icon"></span>Get listed on trusted local sites</li>
+            <li><span class="check-icon"></span>Get recommended by ChatGPT</li>
+            <li><span class="check-icon"></span>Generate more local leads</li>
           </ul>
-          <a href="#" class="btn btn-secondary btn-lg plan-cta">Get started</a>
+          <a href="/call" class="btn btn-secondary btn-lg plan-cta">Book a Call</a>
         </div>
 
       </div>
@@ -130,29 +133,34 @@ import TestimonialsSection from '../components/TestimonialsSection.astro';
         <div class="faq-list">
           <div class="accordion-item" data-accordion>
             <button class="accordion-trigger">
-              Is the free website really free?
+              Is there really no upfront cost?
               <span class="accordion-icon"></span>
             </button>
             <div class="accordion-body">
-              Yes. We design and build your website at no upfront cost with no obligation to keep it. Once it's ready, you can decide whether to move forward. If you do, you'll choose either the Essentials or Google Booster plan and commit to a minimum of 12 months.
+              That's right. We build and launch your website with no big upfront bill. You just pay one flat
+              monthly rate depending on the plan you choose, and you're up and running.
             </div>
           </div>
           <div class="accordion-item" data-accordion>
             <button class="accordion-trigger">
-              What's the difference between Essentials and Google Booster?
+              What's the difference between the plans?
               <span class="accordion-icon"></span>
             </button>
             <div class="accordion-body">
-              Essentials (£49/month) covers website hosting, security, technical maintenance, and email support. Google Booster (£299/month) includes everything in Essentials plus local SEO, Google Maps optimisation, monthly content updates, Google Business Profile management, performance reporting, and priority support.
+              Starter (£65/month) gets you a professional website built to capture enquiries, with an AI chatbot
+              and every lead sent straight to your phone. Growth (£199/month) adds automation on top, so old leads
+              get revived, missed calls get followed up, and reviews get requested without you lifting a finger.
+              Professional layers on local SEO, so you show up higher on Google, Google Maps, and even AI tools
+              like ChatGPT.
             </div>
           </div>
           <div class="accordion-item" data-accordion>
             <button class="accordion-trigger">
-              What happens after the 12-month commitment?
+              Can I cancel anytime?
               <span class="accordion-icon"></span>
             </button>
             <div class="accordion-body">
-              After 12 months, you can continue with us on a rolling monthly basis, cancel with 30 days' notice, or take your website elsewhere. If you choose to leave, we'll help you migrate your website and transfer everything to you (the domain, files, and content).
+              Yes. There are no long contracts. If a plan isn't working for you, you can cancel anytime.
             </div>
           </div>
           <div class="accordion-item" data-accordion>
@@ -161,25 +169,40 @@ import TestimonialsSection from '../components/TestimonialsSection.astro';
               <span class="accordion-icon"></span>
             </button>
             <div class="accordion-body">
-              Yes. Once your website is live, you own it outright. We don't lock you into proprietary platforms. Your site is yours to keep, and we'll help you take it with you if you decide to leave after your commitment period.
+              Yes. Once your website is live, it's yours. We don't lock you into proprietary platforms, and if you
+              ever decide to leave, we'll help you take it with you.
             </div>
           </div>
           <div class="accordion-item" data-accordion>
             <button class="accordion-trigger">
-              Can I switch between plans?
+              How soon will I see results with the Professional plan?
               <span class="accordion-icon"></span>
             </button>
             <div class="accordion-body">
-              Yes. You can upgrade from Essentials to Google Booster at any time. If you want to downgrade, just give us 30 days' notice and we'll adjust your plan accordingly.
+              Your website goes live within three to five business days of your first call. Local SEO builds over
+              time, and most clients start seeing meaningful ranking and lead gains within 3 to 6 months.
             </div>
           </div>
           <div class="accordion-item" data-accordion>
             <button class="accordion-trigger">
-              How soon will I see results with Google Booster?
+              Which plan is right for me?
               <span class="accordion-icon"></span>
             </button>
             <div class="accordion-body">
-              Your website will go live within 2 to 3 weeks of your initial call. SEO improvements build over time, and most clients start seeing meaningful ranking and traffic gains within 3 to 6 months.
+              If you just need a professional website that captures enquiries, Starter has you covered. If you're
+              tired of chasing leads and want the follow-up handled for you, Growth is the natural next step. And if
+              ranking higher on Google and Google Maps is the priority, Professional is built for that. Not sure?
+              Book a call and we'll help you figure out what fits.
+            </div>
+          </div>
+          <div class="accordion-item" data-accordion>
+            <button class="accordion-trigger">
+              Is there a setup or joining fee?
+              <span class="accordion-icon"></span>
+            </button>
+            <div class="accordion-body">
+              No. £0 upfront means exactly that. You only pay the flat monthly rate for the plan you choose, with
+              no separate setup, onboarding or joining costs.
             </div>
           </div>
         </div>
@@ -198,84 +221,8 @@ import TestimonialsSection from '../components/TestimonialsSection.astro';
   <section class="final-cta-section">
     <div class="container text-center fade-up">
       <h2 class="section-title">Ready to get started?</h2>
-      <p class="final-cta-sub">Get your free website and start generating more local inquiries today.</p>
-      <button class="btn btn-primary btn-xl" id="promo-modal-open-footer">Request my free website</button>
+      <p class="final-cta-sub">Book a quick call and we'll show you how to bring in more customers online, starting with a plan built around your business.</p>
+      <a href="/call" class="btn btn-primary btn-xl">Book a quick call</a>
     </div>
   </section>
-
-  <!-- ============================================================
-       FREE WEBSITE MODAL
-  ============================================================ -->
-  <div class="modal-overlay" id="promo-modal" aria-modal="true" role="dialog" aria-labelledby="modal-title">
-    <div class="modal-card">
-      <button class="modal-close" id="promo-modal-close" aria-label="Close">&#x2715;</button>
-      <form class="modal-form" action="#" method="post">
-        <div class="modal-form-row">
-          <div class="modal-form-group">
-            <label class="modal-form-label" for="modal-name">Your name</label>
-            <input class="modal-form-input" type="text" id="modal-name" name="name" placeholder="James Mitchell" autocomplete="name" required>
-          </div>
-          <div class="modal-form-group">
-            <label class="modal-form-label" for="modal-business">Business name</label>
-            <input class="modal-form-input" type="text" id="modal-business" name="business" placeholder="Mitchell Plumbing Ltd" required>
-          </div>
-        </div>
-        <div class="modal-form-row">
-          <div class="modal-form-group">
-            <label class="modal-form-label" for="modal-email">Email address</label>
-            <input class="modal-form-input" type="email" id="modal-email" name="email" placeholder="james@mitchellplumbing.co.uk" autocomplete="email" required>
-          </div>
-          <div class="modal-form-group">
-            <label class="modal-form-label" for="modal-phone">Phone number</label>
-            <input class="modal-form-input" type="tel" id="modal-phone" name="phone" placeholder="+44 7700 000000" autocomplete="tel" required>
-          </div>
-        </div>
-        <div class="modal-form-group">
-          <label class="modal-form-label" for="modal-website">Current website <span class="modal-form-optional">(optional)</span></label>
-          <input class="modal-form-input" type="url" id="modal-website" name="website" placeholder="https://www.example.co.uk">
-        </div>
-        <div class="modal-form-group">
-          <label class="modal-form-label" for="modal-comments">Anything else we should know? <span class="modal-form-optional">(optional)</span></label>
-          <textarea class="modal-form-input modal-form-textarea" id="modal-comments" name="comments" placeholder="Tell us about your business, the areas you cover, any inspiration, or links we should look at before designing your site…" rows="3"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary btn-lg modal-form-submit">Request My Free Website</button>
-      </form>
-    </div>
-  </div>
-
-  <script>
-    (function () {
-      var overlay = document.getElementById('promo-modal');
-      var openBtns = [
-        document.getElementById('promo-modal-open'),
-        document.getElementById('promo-modal-open-hero'),
-        document.getElementById('promo-modal-open-footer')
-      ];
-      var closeBtn = document.getElementById('promo-modal-close');
-
-      function openModal() {
-        overlay.classList.add('modal-overlay--open');
-        document.body.style.overflow = 'hidden';
-      }
-
-      function closeModal() {
-        overlay.classList.remove('modal-overlay--open');
-        document.body.style.overflow = '';
-      }
-
-      openBtns.forEach(function(btn) {
-        if (btn) {
-          btn.addEventListener('click', openModal);
-        }
-      });
-
-      closeBtn.addEventListener('click', closeModal);
-      overlay.addEventListener('click', function (e) {
-        if (e.target === overlay) closeModal();
-      });
-      document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') closeModal();
-      });
-    })();
-  </script>
 </BaseLayout>
