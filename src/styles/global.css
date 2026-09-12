@@ -406,10 +406,16 @@ a { text-decoration: none; color: inherit; }
 .nav-header.scrolled .nav-logo-icon--dark { display: block; }
 
 /* ---- Links ---- */
+.nav-right-group {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-left: auto;
+}
+
 .nav-links {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
 }
 
 .nav-links > ul {
@@ -477,7 +483,6 @@ a { text-decoration: none; color: inherit; }
   align-items: center;
   gap: 8px;
   flex-shrink: 0;
-  margin-left: auto;
 }
 
 /* Dark-hero state: Sign in = ghost green border, Register = solid green */
@@ -2609,7 +2614,7 @@ a { text-decoration: none; color: inherit; }
 
 .footer-inner {
   display: grid;
-  grid-template-columns: 1.8fr 1fr 1fr 1fr 1.4fr;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
   gap: 40px;
   padding-bottom: 56px;
 }
