@@ -1,0 +1,153 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Privacy Policy — Levelled Media"
+  description="How Levelled Media collects, uses and protects your personal data."
+  pageStyles={`
+    .legal-hero {
+      padding-bottom: 32px;
+    }
+
+    .legal-content {
+      max-width: 760px;
+      margin: 0 auto;
+      padding-bottom: 96px;
+    }
+
+    .legal-content h2 {
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--dark);
+      margin: 40px 0 12px;
+    }
+
+    .legal-content h2:first-child {
+      margin-top: 0;
+    }
+
+    .legal-content p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--body-text);
+      margin: 0 0 16px;
+    }
+
+    .legal-content ul {
+      margin: 0 0 16px;
+      padding-left: 20px;
+    }
+
+    .legal-content li {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--body-text);
+      margin-bottom: 8px;
+    }
+
+    .legal-content a {
+      color: var(--dark);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .legal-updated {
+      font-size: 14px;
+      color: var(--body-text);
+    }
+  `}
+>
+  <section class="hero-section hero-section--compact legal-hero" id="hero">
+    <div class="container hero-inner hero-inner--centered">
+      <h1 class="hero-title fade-up">Privacy Policy</h1>
+      <p class="hero-subtitle fade-up legal-updated">Last updated: 12 September 2026</p>
+    </div>
+  </section>
+
+  <section class="legal-content">
+    <div class="container">
+
+      <h2>Who we are</h2>
+      <p>
+        Levelled Media ("we", "us", "our") builds websites and provides local SEO services for local
+        service businesses. This policy explains what personal data we collect through
+        levelledmedia.com, why we collect it, and what rights you have over it.
+      </p>
+
+      <h2>What we collect</h2>
+      <p>We collect personal data you give us directly, such as when you:</p>
+      <ul>
+        <li>Fill in a contact or "free website" enquiry form (name, business name, email, phone number, website URL, and any message you enter)</li>
+        <li>Book a call through our scheduling widget (name, email, phone number, and the time zone/slot you select)</li>
+      </ul>
+      <p>
+        We also collect limited technical data automatically when you browse the site, such as pages
+        visited and general interaction data, via the tools described below.
+      </p>
+
+      <h2>How we use it</h2>
+      <ul>
+        <li>To respond to your enquiry and discuss our services</li>
+        <li>To schedule and manage calls you book with us</li>
+        <li>To measure how our marketing is performing and improve it</li>
+        <li>To meet our legal and accounting obligations</li>
+      </ul>
+      <p>We do not sell your personal data.</p>
+
+      <h2>Third parties we use</h2>
+      <p>We share data with a small number of service providers who process it on our behalf:</p>
+      <ul>
+        <li><strong>GoHighLevel / LeadConnector</strong> — powers our contact forms and call-booking widget, and stores enquiry details in our CRM</li>
+        <li><strong>Meta (Facebook) Pixel</strong> — measures ad performance and site visits for our marketing; this sets cookies in your browser, which you can block in your browser settings</li>
+        <li><strong>GitHub Pages</strong> — hosts this website and may log standard technical data (such as IP address) as part of normal web hosting</li>
+      </ul>
+
+      <h2>How long we keep it</h2>
+      <p>
+        We keep enquiry and booking data for as long as needed to respond to you, deliver our services,
+        and meet legal or accounting requirements, after which it is deleted or anonymised.
+      </p>
+
+      <h2>Your rights</h2>
+      <p>Under UK GDPR, you can ask us to:</p>
+      <ul>
+        <li>Access the personal data we hold about you</li>
+        <li>Correct inaccurate data</li>
+        <li>Delete your data</li>
+        <li>Restrict or object to how we use it</li>
+        <li>Receive a copy of your data in a portable format</li>
+      </ul>
+      <p>
+        To exercise any of these rights, contact us using the details below. You can also complain to
+        the UK Information Commissioner's Office (ico.org.uk) if you're unhappy with how we handle
+        your data.
+      </p>
+
+      <h2>Children</h2>
+      <p>Our services are aimed at businesses, not children. We do not knowingly collect data from anyone under 16.</p>
+
+      <h2>Changes to this policy</h2>
+      <p>We may update this policy from time to time. The "last updated" date above shows when it last changed.</p>
+
+      <h2>Contact us</h2>
+      <p>
+        For any privacy questions or to exercise your rights, email us at
+        <span id="privacy-email-slot">lewis[at]levelledmedia[dot]com</span>.
+      </p>
+
+    </div>
+  </section>
+
+  <script>
+    const el = document.getElementById('privacy-email-slot');
+    if (el) {
+      const user = 'lewis';
+      const domain = 'levelledmedia.com';
+      const link = document.createElement('a');
+      link.href = `mailto:${user}@${domain}`;
+      link.textContent = `${user}@${domain}`;
+      el.replaceWith(link);
+    }
+  </script>
+</BaseLayout>
