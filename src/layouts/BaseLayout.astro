@@ -10,7 +10,6 @@ interface Props {
   minimalFooter?: boolean;
   hideFooter?: boolean;
   disableLogoLink?: boolean;
-  pixelEvent?: string;
 }
 
 const {
@@ -20,8 +19,7 @@ const {
   minimalHeader = false,
   minimalFooter = false,
   hideFooter = false,
-  disableLogoLink = false,
-  pixelEvent = 'PageView'
+  disableLogoLink = false
 } = Astro.props;
 const isDev = import.meta.env.DEV;
 const baseUrl = import.meta.env.BASE_URL;
