@@ -51,7 +51,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       text-align: center;
     }
 
-    .success-title {
+    .success-panel .success-title {
+      color: var(--dark);
       margin: 0 auto 16px;
       max-width: 680px;
     }
@@ -61,23 +62,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       margin: 0 auto;
       font-size: 18px;
       line-height: 1.7;
-      color: var(--body-text);
-    }
-
-    .schedule-subfooter {
-      padding: 8px 0 12px;
-      border-top: 1px solid rgba(0,33,43,0.1);
-      background: var(--soft-bg);
-    }
-
-    .schedule-subfooter-inner {
-      display: flex;
-      justify-content: center;
-      text-align: center;
-    }
-
-    .schedule-subfooter-copy {
-      font-size: 13px;
       color: var(--body-text);
     }
 
@@ -128,10 +112,4 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
     </div>
   </section>
-
-  <div class="schedule-subfooter">
-    <div class="container schedule-subfooter-inner">
-      <p class="schedule-subfooter-copy">© 2026 Levelled Media. All rights reserved.</p>
-    </div>
-  </div>
 </BaseLayout>
