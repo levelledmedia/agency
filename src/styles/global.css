@@ -3043,10 +3043,23 @@ a { text-decoration: none; color: inherit; }
 }
 
 @media (max-width: 600px) {
-  .auto-testimonial-card { flex: 0 0 80vw; width: 80vw; }
-  /* On mobile, fade from 20px in each side */
+  .auto-testimonial-card { flex: 0 0 80vw; width: 80vw; scroll-snap-align: start; }
+  /* The continuous auto-scroll marquee leaves a card half-cut at the edge
+     on narrow screens (the fade mask can't hide that much of a wide card).
+     Swap it for a manual swipe-to-scroll carousel with full cards snapping
+     into place instead. */
   .auto-carousel-wrap {
-    -webkit-mask-image: linear-gradient(to right, transparent 0, black 100px, black calc(100% - 100px), transparent 100%);
-    mask-image: linear-gradient(to right, transparent 0, black 100px, black calc(100% - 100px), transparent 100%);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+  .auto-carousel-track {
+    animation: none;
+  }
+  /* Cards 6+ are JS clones used only to loop the desktop marquee seamlessly */
+  .auto-testimonial-card:nth-child(n+6) {
+    display: none;
   }
 }
