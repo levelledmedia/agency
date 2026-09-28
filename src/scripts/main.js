@@ -37,12 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
   ---------------------------------------------------------- */
   const burger = document.getElementById('nav-burger');
   const navLinks = document.getElementById('nav-links');
-  const navActions = document.querySelector('.nav-actions');
 
   if (burger) {
     burger.addEventListener('click', () => {
       const isOpen = navLinks.classList.toggle('open');
-      navActions.classList.toggle('open', isOpen);
       burger.setAttribute('aria-expanded', isOpen);
     });
   }
@@ -51,7 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('#nav-links a').forEach(link => {
     link.addEventListener('click', () => {
       navLinks.classList.remove('open');
-      navActions.classList.remove('open');
     });
   });
 

@@ -416,6 +416,7 @@ a { text-decoration: none; color: inherit; }
 .nav-links {
   display: flex;
   align-items: center;
+  gap: 32px;
 }
 
 .nav-links > ul {
@@ -2724,7 +2725,7 @@ a { text-decoration: none; color: inherit; }
 @media (max-width: 900px) {
   :root { --section-py: 80px; }
 
-  .nav-links, .nav-actions { display: none; }
+  .nav-links { display: none; }
   .nav-burger { display: flex; }
   .nav-inner { gap: 16px; }
 
@@ -2742,18 +2743,20 @@ a { text-decoration: none; color: inherit; }
     border-bottom: 1px solid rgba(0,33,43,0.1);
     box-shadow: 0 8px 32px rgba(0,33,43,0.08);
     z-index: 999;
+    gap: 16px;
   }
   .nav-links.open > ul { flex-direction: column; gap: 4px; }
-  .nav-actions.open {
+  .nav-links.open > ul > li > a {
+    color: var(--dark);
+  }
+  .nav-links.open > ul > li > a:hover {
+    background: var(--soft-bg);
+  }
+  .nav-links.open .nav-actions {
     display: flex;
-    position: absolute;
-    top: 280px;
-    left: 32px;
-    right: 32px;
     flex-direction: column;
-    background: var(--white);
-    padding-bottom: 24px;
-    z-index: 999;
+    padding-top: 16px;
+    border-top: 1px solid rgba(0,33,43,0.1);
   }
 
   .hero-title { font-size: 44px; }
