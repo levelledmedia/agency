@@ -2764,6 +2764,14 @@ a { text-decoration: none; color: inherit; }
   .section-title { font-size: 36px; }
 
   .split-grid { grid-template-columns: 1fr; }
+  .split-card { min-height: 0; }
+  .split-card-visual { margin-top: 24px; }
+  .split-card-phone--static { height: auto; }
+  .split-card-phone-img--static {
+    position: static;
+    bottom: auto;
+    left: auto;
+  }
   .value-grid { grid-template-columns: 1fr 1fr; }
   .detail-inner { grid-template-columns: 1fr; gap: 40px; }
   .detail-inner--reverse { direction: ltr; }
